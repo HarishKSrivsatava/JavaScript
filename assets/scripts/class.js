@@ -33,3 +33,22 @@ var myObject={
     console.log(myObject2.objProp); //Object { innerProp1: "innerPropVal", innerProp2: "innerPropVal2", newInnerProp: "newInnerPropVal" }
 
     console.log(myObject2);//Object { prop1: "Object2", prop2: Object, objProp: Object }
+
+
+    var myObj={
+        "prop1": "Hello",
+        "prop2" :"",
+        "prop3": null
+      };
+      myObj.prop1=undefined;
+      console.log(myObj.prop1);//undefined
+      console.log(myObj); // Object { prop1: undefined, prop2: "", prop3: null } --> prop1 property exists in the object , it show we haven't deleted the property , but have simple masked it.
+
+    var myObj={
+        "prop1": "Hello",
+        "prop2" :"",
+        "prop3": null
+      };
+      delete myObj.prop1; // Actual deletion of property
+      console.log(myObj.prop1); //undefined
+      console.log(myObj); //Object { prop2: "" , prop3:null}
