@@ -88,3 +88,23 @@ var myObject={
 
 
 
+//var -arg function : implict arguments : (1) arguments (2) this 
+var add=function (a,b){
+    var i, sum=0;
+      for(i=0;i < arguments.length ;i++)
+         sum += arguments[i] ;
+      return sum;
+    }
+    
+    console.log(add(1,2));//3
+    console.log(add(1,2,3)); //6
+    console.log(add(1,2,3,4)); //10
+
+// Implict Array
+var myArray = [ 100, "Hello", true, {} ]
+var myFunction = function(item)
+{
+   console.log(item);
+}
+myArray.forEach(myFunction); // For every element in the array  (4 times)
+
