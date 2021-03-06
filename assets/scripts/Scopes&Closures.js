@@ -66,4 +66,51 @@ ret_inner();// a = 10 , b = 20
 var ret_inner_2 = outer(); 
 ret_inner_2(); // a = 10 , b = 20
 //This is because of for every function call (which is actually a function object) we get a fresh copy of variable(s) of that scope.
-  
+ 
+
+//There is no access modifier like public , private in JavaScript.
+// Once created, the properties of this Person object is accessible everywhere.
+
+var person = {
+    "firstName":"Robert",
+    "lastName" : "Willson",
+    "getFirstName": function(){
+        return this.firstName;
+    }, 
+    "lastName": function(){
+        return this.lastName;
+    }
+}
+console.log("First Name : " + person.firstName);
+//To convert this code so that its properties are not accessible outside directly, we use the concept of Scope.
+function createPerson(){
+    var firstName = "Harish";
+    var lastName = "Kumar";
+    var person = {
+        "getFirstName" : function(){
+            return firstName;
+        },
+        "lastName" : function(){
+            return lastName;
+        }
+    };
+    return person;
+    }
+var personCreated = createPerson();
+console.log(personCreated.getFirstName());
+console.log(personCreated.firstName); // Undefined
+
+
+
+
+
+var i = 0;
+var myFun = function(){
+    console.log(i);
+}
+for(i ; i<5; i++){
+    setTimeout(myFun, 5000);
+}
+//Here what basically happens, the setTimeout is registered for function myFunc for 5 times that all 
+//are waiting for 5 seconds. Meanwhile the value of i increases and the value of every copy of i reaches
+// to 5. And finally all the 5 copies of i gets printed at once after 5 seconds.
