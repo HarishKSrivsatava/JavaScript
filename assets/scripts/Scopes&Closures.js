@@ -1,3 +1,4 @@
+
 // Java script does not create scope for a block
 var name = "Harish"
 if(name == "Harish"){
