@@ -50,7 +50,8 @@ function outer(){
 }
 var ret_inner = outer(); //catching the inner() function
 ret_inner(); // execution of catched inner() function
-//Note : variable b is accessible outside of the outer () function !!!  .This is because of the Closure concept of Java Script.
+//Note : variable b is accessible outside of the outer () function !!!  .This is because of
+// the Closure concept of Java Script.
 
 
 var a = 10;
@@ -65,7 +66,8 @@ var ret_inner = outer(); // a = 10 , b = 20
 ret_inner();// a = 10 , b = 20
 var ret_inner_2 = outer(); 
 ret_inner_2(); // a = 10 , b = 20
-//This is because of for every function call (which is actually a function object) we get a fresh copy of variable(s) of that scope.
+//This is because of for every function call (which is actually a function object)
+// we get a fresh copy of variable(s) of that scope.
  
 
 //There is no access modifier like public , private in JavaScript.
