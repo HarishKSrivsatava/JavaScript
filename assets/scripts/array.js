@@ -1,6 +1,9 @@
+
+//Technically, an array is an object where properties are number based on 0 index.
+
 var myArr = ["Hi", "Hello"]
-console.log("Type of array : " + typeof myArr);
-console.log(myArr)
+console.log("Type of array : " + typeof myArr); //Type of array : object
+console.log(myArr) //[ 'Hi', 'Hello' ]  
 /*
         ["Hi", "Hello"]
         0: "Hi"
@@ -8,13 +11,13 @@ console.log(myArr)
         length: 2
 */
 
-console.log("First Element : " + myArr[0])
-console.log("Second Element : " + myArr[1])
-console.log("Next element :" + myArr[3]) // undefined
+console.log("First Element : " + myArr[0]) //First Element : Hi
+console.log("Second Element : " + myArr[1]) //Second Element : Hello
+console.log("Next element :" + myArr[3]) // Next element :undefined
 
 // Addition of elements in array
 myArr[2] = "Test"
-console.log(myArr)
+console.log(myArr) //[ 'Hi', 'Hello', 'Test' ]
 /*
  ["Hi", "Hello", "Test"]
 	0: "Hi"
@@ -34,7 +37,7 @@ console.log(myArr)
 */
 
 // length of an array
-console.log("Length of  myArr : " + myArr.length)
+console.log("Length of  myArr : " + myArr.length) //Length of  myArr : 21
 
 // Array can be heterogeneous 
 myArr[4] = 123

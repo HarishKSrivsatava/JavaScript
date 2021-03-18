@@ -2,17 +2,16 @@
 
 // Definition of function 
 function TestFunction (){
-   // alert("From function")
    console.log("Hello function")
 }
 //Execution of function
-TestFunction()
+TestFunction() //Hello function
 
 // Definition of function with argument(s)
 function greetings(salutation, name){
     console.log("Hello " + salutation + "."+ name + " !")
 }
-greetings("Mr", "Harish")
+greetings("Mr", "Harish") //Hello Mr.Harish !
 
 
 // Anonymous function 
@@ -21,7 +20,7 @@ var anoFun = function(){
     console.log("Hello from Anonymous Function " );
 }
 //Execution
-anoFun();
+anoFun(); //Hello from Anonymous Function 
 
 //Function as an argument
 var funTest = function (){
@@ -34,21 +33,25 @@ var executor = function(f){
  
 }
 executor()
-
+/*
+Anonymous function
+From executor
+Anonymous function
+*/
 
 // Function as an object
 var myObj = {
     "prop1" :"name",
     "prop2" : function hello(){
-        console.log("No arg function");
+        console.log("No arg function from prop1");
     },
     "prop3" : function (){
-        console.log("Anonymous function")
+        console.log("Anonymous function from prop2")
     }
 }
+myObj.prop2() //No arg function from prop1
+myObj.prop3() //Anonymous function from prop2
 
-myObj.prop2()
-myObj.prop3()
 
 // Understanding this keyword
 var myObj3 = {
@@ -82,20 +85,20 @@ var myObject={
 
      }
   }
-
   var state=myObject.isFromState("JSState");
-  console.log(state);
+  console.log(state); //true
 
 
 
-//var -arg function : implict arguments : (1) arguments (2) this 
+//var -arg function : 
+//This is achieved with the help of an implicit argument called "arguments".
+//implict arguments : (1) arguments (2) this 
 var add=function (a,b){
     var i, sum=0;
       for(i=0;i < arguments.length ;i++)
          sum += arguments[i] ;
       return sum;
     }
-    
     console.log(add(1,2));//3
     console.log(add(1,2,3)); //6
     console.log(add(1,2,3,4)); //10

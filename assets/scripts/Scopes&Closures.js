@@ -1,11 +1,12 @@
 
 // Java script does not create scope for a block
-var name = "Harish"
+var name = "Harish" // Global varaible
 if(name == "Harish"){
     name2 = "Kumar"
 }
-console.log(name);
-console.log(name2); 
+console.log("Global variable : " + name); //Global variable : Harish
+console.log("Block variable : " + name2); // Block variable : Kumar :> name2 is also 
+//treated as global variable as Java script does not create scope for a block
 
 // Java script only create function scope
 var name = "Test"
