@@ -46,3 +46,22 @@ console.log(myObject_2)
   prop_22: { inner_prop_1: 'inner_value_1', inner_prop_2: 10 }
 }
 */
+
+
+// Deleting a property from an object
+var myObject = {
+    "prop_1": "Hello",
+    "prop_2": 10
+}
+console.log(myObject); //{ prop_1: 'Hello', prop_2: 10 }
+myObject.prop_2 = undefined
+console.log(myObject); 
+//{ prop_1: 'Hello', prop_2: undefined } :> prop_2 property exists still
+myObject.prop_2 = null
+console.log(myObject); 
+//{ prop_1: 'Hello', prop_2: null } :> prop_2 property exists still
+delete myObject.prop_2
+console.log("After property deletion : ");
+console.log(myObject); //{ prop_1: 'Hello' } :> prop_2 property deleted
+
+
