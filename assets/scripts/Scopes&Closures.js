@@ -118,3 +118,25 @@ for(i ; i<5; i++){
 //Here what basically happens, the setTimeout is registered for function myFunc for 5 times that all 
 //are waiting for 5 seconds. Meanwhile the value of i increases and the value of every copy of i reaches
 // to 5. And finally all the 5 copies of i gets printed at once after 5 seconds.
+
+
+console.log("===================================================");
+var a = 100;
+function outer(){
+    var b = 200;
+    var inner = function(){
+                               a++;
+                               b++;
+                               console.log("a = " + a + " |" +" b = "+ b );
+                          };
+    return inner;
+    }
+//outer().inner;
+var ret_inner = outer();
+ret_inner(); //a = 101 b = 201
+var ret_inner_2 = outer();
+ret_inner_2(); //a = 102 b = 201
+var ret_inner_3 = outer();
+ret_inner_3(); //a = 103 b = 201
+// Note : For every outer() function call, a fresh copy of 'b' is being sent
+console.log("===================================================");
