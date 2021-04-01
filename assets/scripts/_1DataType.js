@@ -17,4 +17,8 @@ console.log(typeof(name)) //string
 
 console.log("Type of nullTest : " + typeof nulltest) //Type of nullTest : undefined
 
+console.log('test string'/2); //NaN
+
+console.log(typeof(1)); //number
+
 // Objects

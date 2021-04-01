@@ -1,6 +1,10 @@
 
 //Technically, an array is an object where properties are number based on 0 index.
 
+// Heterogenous collection
+var myArrTest = ['String', 10, 10.3]
+console.log(myArrTest); // [ 'String', 10, 10.3 ]
+
 var myArr = ["Hi", "Hello"]
 console.log("Type of array : " + typeof myArr); //Type of array : object
 console.log(myArr) //[ 'Hi', 'Hello' ]  
@@ -36,7 +40,7 @@ console.log(myArr)
     length: 21
 */
 
-// length of an array
+// length of an array : using length property of JavaScript Object
 console.log("Length of  myArr : " + myArr.length) //Length of  myArr : 21
 
 // Array can be heterogeneous 

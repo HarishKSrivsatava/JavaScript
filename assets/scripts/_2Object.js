@@ -35,10 +35,10 @@ console.log(myObject_1);
   var myObject_2 = {
       "prop_21": "Hello",
       "prop_22" : {
-          "inner_prop_1" : "inner_value_1",
-          "inner_prop_2": 10
-      }
-  }
+                    "inner_prop_1" : "inner_value_1",
+                    "inner_prop_2": 10
+                 }
+         }
 console.log(myObject_2)
 /*
 {

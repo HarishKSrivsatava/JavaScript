@@ -1,4 +1,19 @@
 
+let myVar = 10
+var myObj = {
+    "prop_1": "Hello World",
+    "prop_2": function test(){
+        console.log(myVar);
+        console.log(this.prop_1);
+    }
+}
+myObj.prop_2()
+/*
+10
+Hello World
+*/
+
+
 // Java script does not create scope for a block
 var name = "Harish" // Global varaible
 if(name == "Harish"){

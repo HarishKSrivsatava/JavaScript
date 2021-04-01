@@ -55,7 +55,7 @@ myObj.prop3() //Anonymous function from prop2
 
 // Understanding this keyword
 var myObj3 = {
-    "prop1": "Harish",
+    "prop1" : "Harish",
     "prop2" : "Kumar",
     "getFullName" : function test(){
        // return (prop1) //function.js:58 Uncaught ReferenceError: prop1 is not defined
@@ -68,21 +68,11 @@ console.log(myObj3.getFullName()); // Harish
 var myObject={
     "firstName": "Harish",
     "lastName": "Kumar",
-    "getFullName": function(){
-      return this.firstName +" "+ this.lastName;
-    },
-    "address": {
-      "street": "JS Street",
-      "city"  : "JS City",
-      "state" : "JSState"
-      },
-     "isFromState":function(state){
-       if(state == this.address.state)
-         return true ;
-       else
-         return false;
-  /*  return (state === this.address.state) */
-
+    "getFullName": function(){return this.firstName +" "+ this.lastName;},
+    "address": { "street": "JS Street",  "city"  : "JS City","state" : "JSState"},
+     "isFromState": function(state){  if(state == this.address.state) return true ;
+                                     else return false;
+        /*  return (state === this.address.state) */
      }
   }
   var state=myObject.isFromState("JSState");
@@ -110,4 +100,10 @@ var myFunction = function(item)
    console.log(item);
 }
 myArray.forEach(myFunction); // For every element in the array  (4 times)
+
+//Anonymous function and its execution
+(function (){
+  var a = 10, b = 20;
+  console.log("Anonymous function : "+ (a+b))
+})(); // This is called IIFE (Immediate Invoked Function Expression)
 
